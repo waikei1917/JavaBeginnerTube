@@ -1,9 +1,14 @@
 package com.JavaBeginnerTube;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+
+        //Very simple print functiion and Variables
+        /*
         System.out.println("Hello World!!!");
 
         double tuna;
@@ -13,6 +18,14 @@ public class Main {
         System.out.println(" Moives");
 
         System.out.print("Apples");
+        */
+
+        //Take user input and Print it out
+        /*
+        Scanner fish = new Scanner(System.in);
+        System.out.println(fish.nextLine());
+        */
+
 
     }
 }
