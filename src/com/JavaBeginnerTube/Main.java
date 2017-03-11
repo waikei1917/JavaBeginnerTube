@@ -1,6 +1,7 @@
 package com.JavaBeginnerTube;
 
 import java.util.Scanner;
+import java.util.StringJoiner;
 
 public class Main {
 
@@ -17,7 +18,15 @@ public class Main {
         //T11LogicalOperators();
         //T12SwitchStatement();
         //T13WhileLoop();
-        T14UsingMultipleClasses();
+        //T14UsingMultipleClasses();
+        //T15MethodWithParameters();
+        //T16ManyMethodsAndInstances();
+        //T17Constructors();
+        //T18NestedIfStatement();
+        //T19ElseIfStatement();
+        //T20ConditionalOperators();
+        //T21SimpleAveragingProgram();
+        T22ForLoop();
     }
 
     public static void T4HelloWorld (){
@@ -169,5 +178,91 @@ public class Main {
     public static void T14UsingMultipleClasses () {
         TunaFish tunaFishObject = new TunaFish();
         tunaFishObject.simpleMessage();
+    }
+
+    public static void T15MethodWithParameters () {
+        System.out.println("Please enter a your name: ");
+        Scanner fish = new Scanner(System.in);
+        String name = fish.nextLine();
+
+        TunaFish tunaFishObject = new TunaFish();
+        tunaFishObject.simpleHelloMessage(name);
+    }
+
+    public static void T16ManyMethodsAndInstances () {
+        System.out.println("Please enter the name: ");
+        Scanner fish = new Scanner(System.in);
+        String name = fish.nextLine();
+
+        TunaFish tunaFishObject = new TunaFish();
+        tunaFishObject.setName(name);
+        tunaFishObject.saying();
+
+    }
+
+    public static void T17Constructors () {
+        TunaFish tunaFishObject = new TunaFish("Joe");
+        tunaFishObject.saying();
+    }
+
+    public static void T18NestedIfStatement () {
+        Scanner fish = new Scanner(System.in);
+        int theAge = fish.nextInt();
+
+        if (theAge < 50) {
+            System.out.println("You are so young!");
+        } else {
+            System.out.println("You are old");
+            if (theAge > 75) {
+                System.out.println("You are REALLY old");
+            } else  {
+                System.out.println("You are not that old");
+            }
+        }
+    }
+
+    public static void T19ElseIfStatement () {
+        Scanner fish = new Scanner(System.in);
+        int theAge = fish.nextInt();
+
+        if (theAge >= 60){
+            System.out.println("You are a senior citizen!");
+        } else if (theAge >= 50) {
+            System.out.println("You are in your 50s!");
+        } else if (theAge >= 40) {
+            System.out.println("You are in your 40s!");
+        } else {
+            System.out.println("You are young buck");
+        }
+    }
+
+    public static void T20ConditionalOperators () {
+        Scanner fish = new Scanner(System.in);
+        int theAge = fish.nextInt();
+
+        System.out.println(theAge > 50 ? "You are old":"You are young");
+    }
+
+    public static void T21SimpleAveragingProgram () {
+        Scanner input = new Scanner(System.in);
+        int total = 0;
+        int grade;
+        int average;
+        int counter = 0;
+
+        while (counter < 10) {
+            grade = input.nextInt();
+            total = total + grade;
+            counter++;
+        }
+
+        average = total/10;
+        System.out.println("The average is " + average);
+    }
+
+    public static void T22ForLoop () {
+        for (int counter=1;counter<=10;counter++) {
+            System.out.println(counter);
+        }
     }
 }
