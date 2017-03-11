@@ -2,6 +2,7 @@ package com.JavaBeginnerTube;
 
 import java.util.Scanner;
 import java.util.StringJoiner;
+import java.util.Random;
 
 public class Main {
 
@@ -26,7 +27,11 @@ public class Main {
         //T19ElseIfStatement();
         //T20ConditionalOperators();
         //T21SimpleAveragingProgram();
-        T22ForLoop();
+        //T22ForLoop();
+        //T23CompoundInterestProgram();
+        //T24DoWhileLoops();
+        //T25MathClassMethods();
+        T26RandomNumberGenerator();
     }
 
     public static void T4HelloWorld (){
@@ -264,5 +269,50 @@ public class Main {
         for (int counter=1;counter<=10;counter++) {
             System.out.println(counter);
         }
+        for (int counter=1;counter<=78;counter+=3) {
+            System.out.println(counter);
+        }
     }
+
+    public static void T23CompoundInterestProgram () {
+        //A=P(1+R)^n
+        double amount;
+        double principal = 10000;
+        double rate = 0.01;
+
+        for(int day = 1; day<=20; day++) {
+            amount = principal*Math.pow(1+rate,day);
+            System.out.println(day + "  " + amount);
+        }
+    }
+
+    public static void T24DoWhileLoops () {
+        int counter = 0;
+        do {
+            System.out.println(counter);
+            counter++;
+        }while (counter <= 10);
+    }
+
+    public static void T25MathClassMethods () {
+        System.out.println("Abs: " + Math.abs(26));
+        System.out.println("Abs: " + Math.abs(-26));
+        System.out.println("Ceil: " + Math.ceil(7.4));
+        System.out.println("Floor: " + Math.floor(7.4));
+        System.out.println("Max: " + Math.max(8.6,5.2));
+        System.out.println("Min: " + Math.min(8.6,5.2));
+        System.out.println("Pow: " + Math.pow(5,3));
+        System.out.println("Sqrt: " + Math.sqrt(9));
+    }
+
+    public static void T26RandomNumberGenerator() {
+        Random dice = new Random();
+        int number;
+
+        for (int counter=1; counter<=10; counter++) {
+            number = 1 + dice.nextInt(6);
+            System.out.println(number + " ");
+        }
+    }
+
 }
