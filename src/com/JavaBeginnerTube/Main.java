@@ -31,7 +31,13 @@ public class Main {
         //T23CompoundInterestProgram();
         //T24DoWhileLoops();
         //T25MathClassMethods();
-        T26RandomNumberGenerator();
+        //T26RandomNumberGenerator();
+        //T27IntroductionToArrays();
+        //T28CreatingArrayTable();
+        //T29SummingElementsArrays();
+        //T30ArrayElementsAsCounters();
+        //T31EnhancedForLoop();
+        T32ArraysInMethods();
     }
 
     public static void T4HelloWorld (){
@@ -313,6 +319,92 @@ public class Main {
             number = 1 + dice.nextInt(6);
             System.out.println(number + " ");
         }
+    }
+
+    public static void T27IntroductionToArrays () {
+        int size = 10;
+        int fish[] = new int[size];
+        Random dice = new Random();
+
+        for(int counter = 0; counter < size; counter++){
+            fish[counter] = dice.nextInt(100);
+        }
+
+        for (int counter = 0; counter < size; counter++) {
+            System.out.println(fish[counter]);
+        }
+
+        int fish2[] = {1,2,3,4,5};
+        System.out.println(fish2[2]);
+    }
+
+    public static void T28CreatingArrayTable() {
+        System.out.println("Index\tValue");
+        int fish[] = {1,2,3,4,5,6,7,7,8,9,7,4,4,4,18};
+
+        for (int counter = 0;counter < fish.length; counter++){
+            System.out.println(counter + "\t" + fish[counter]);
+        }
+    }
+
+    public static void T29SummingElementsArrays () {
+        int fish[] = RandomArray(50);
+        int sum = 0;
+
+        for (int counter=0; counter<fish.length; counter++) {
+            System.out.println(fish[counter]);
+            sum += fish[counter];
+        }
+        System.out.println("The sum is: " + sum);
+    }
+
+    public static void T30ArrayElementsAsCounters () {
+        Random rand = new Random();
+        int freq[] = new int[7];
+
+        for(int roll=1; roll<5000; roll++) {
+            ++freq[1+rand.nextInt(6)];
+        }
+
+        System.out.println("Face\tFrequency");
+
+        for(int face=1; face<freq.length; face++) {
+            System.out.println(face + "\t" + freq[face]);
+        }
+    }
+
+    public static void T31EnhancedForLoop () {
+        int fish[] = RandomArray(6);
+        int total = 0;
+
+        for (int x:fish) {
+            System.out.println(x);
+            total += x;
+        }
+        System.out.println("Total: " + total);
+    }
+
+    public static void T32ArraysInMethods (){
+        int fish[] = {1,2,3,4,5,6};
+        change(fish);
+
+        for (int y:fish) {
+            System.out.println(y);
+        }
+    }
+    public static void change(int x[]){
+        for (int counter=0; counter<x.length; counter++){
+            x[counter]+=5;
+        }
+    }
+
+    public static int[] RandomArray(int size) {
+        int fish[] = new int[size];
+        Random dice = new Random();
+        for(int counter = 0; counter < size; counter++){
+            fish[counter] = dice.nextInt(1000);
+        }
+        return fish;
     }
 
 }

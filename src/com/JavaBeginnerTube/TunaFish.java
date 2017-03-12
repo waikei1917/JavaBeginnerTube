@@ -32,6 +32,5 @@ public class TunaFish {
     public void saying() {
         System.out.println("The name is " + getName());
         System.out.printf("The name is %s", getName());
-
     }
 }
