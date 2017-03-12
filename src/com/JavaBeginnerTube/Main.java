@@ -41,7 +41,10 @@ public class Main {
         //T33MultidimensionalArrays();
         //T34TableForMultiArrays();
         //T35VariableLengthArguments();
-        T36TimeClass();
+        //T36TimeClass();
+        //T37DisplayRegularTime();
+        //T42ToString();
+        T43Composition();
     }
 
     public static void T4HelloWorld (){
@@ -447,6 +450,23 @@ public class Main {
     public static void T37DisplayRegularTime () {
         FishTime tunaTime = new FishTime();
 
+        System.out.println(tunaTime.toMill());
+        System.out.println(tunaTime.toString());
+
+        tunaTime.setTime(18,25,30);
+        System.out.println(tunaTime.toMill());
+        System.out.println(tunaTime.toString());
+    }
+
+    public static void T42ToString () {
+        potpie potObject = new potpie(4,5,6);
+        System.out.println(potObject.toString());
+    }
+
+    public static void T43Composition () {
+        potpie potObject = new potpie(4,5,6);
+        TunaPersonal tunaPersonalObject = new TunaPersonal("Tom", potObject);
+        System.out.println(tunaPersonalObject);
     }
 
     public static int[] RandomArray(int size) {
