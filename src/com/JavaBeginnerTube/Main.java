@@ -37,7 +37,11 @@ public class Main {
         //T29SummingElementsArrays();
         //T30ArrayElementsAsCounters();
         //T31EnhancedForLoop();
-        T32ArraysInMethods();
+        //T32ArraysInMethods();
+        //T33MultidimensionalArrays();
+        //T34TableForMultiArrays();
+        //T35VariableLengthArguments();
+        T36TimeClass();
     }
 
     public static void T4HelloWorld (){
@@ -396,6 +400,53 @@ public class Main {
         for (int counter=0; counter<x.length; counter++){
             x[counter]+=5;
         }
+    }
+
+    public static void T33MultidimensionalArrays () {
+        int firstArray[][] = {{8,9,10,11},{12,13,14,15}};
+        int secondArray[][]={{30,31,32,33},{43},{4,5,6}};
+    }
+
+    public static void T34TableForMultiArrays () {
+        int firstArray[][] = {{8,9,10,11},{12,13,14,15}};
+        int secondArray[][]={{30,31,32,33},{43},{4,5,6}};
+
+        System.out.println("The first Array:");
+        displayTwoDArrays(firstArray);
+
+        System.out.println("The second Array:");
+        displayTwoDArrays(secondArray);
+    }
+    public static void displayTwoDArrays(int x[][]) {
+        for (int row=0; row<x.length; row++) {
+            for(int column=0; column<x[row].length; column++) {
+                System.out.print(x[row][column]+"\t");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void T35VariableLengthArguments () {
+        System.out.println(average(1,2,4,88,3,32,3,456,45,45,6,6,4,3,5,57,8,7,9,56,5));
+    }
+    public static int average(int...numbers) {
+        int total = 0;
+        for(int x:numbers) {
+            total+=x;
+        }
+        return total/numbers.length;
+    }
+
+    public static void T36TimeClass () {
+        FishTime tunaTime = new FishTime();
+        System.out.println(tunaTime.toMill());
+        tunaTime.setTime(12,25,30);
+        System.out.println(tunaTime.toMill());
+    }
+
+    public static void T37DisplayRegularTime () {
+        FishTime tunaTime = new FishTime();
+
     }
 
     public static int[] RandomArray(int size) {
