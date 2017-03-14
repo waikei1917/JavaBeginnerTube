@@ -1,5 +1,6 @@
 package com.JavaBeginnerTube;
 
+import java.util.EnumSet;
 import java.util.Scanner;
 import java.util.StringJoiner;
 import java.util.Random;
@@ -44,7 +45,10 @@ public class Main {
         //T36TimeClass();
         //T37DisplayRegularTime();
         //T42ToString();
-        T43Composition();
+        //T43Composition();
+        //T44Enumeration();
+        //T45EnumSetRange();
+        T46Static();
     }
 
     public static void T4HelloWorld (){
@@ -467,6 +471,30 @@ public class Main {
         potpie potObject = new potpie(4,5,6);
         TunaPersonal tunaPersonalObject = new TunaPersonal("Tom", potObject);
         System.out.println(tunaPersonalObject);
+    }
+
+    public static void T44Enumeration () {
+        for (EnumTuna people: EnumTuna.values()) {
+            System.out.printf("%s\t%s\t%s\n",people,people.getDesc(),people.getYear());
+        }
+    }
+
+    public static void T45EnumSetRange () {
+        for (EnumTuna people: EnumTuna.values()) {
+            System.out.printf("%s\t%s\t%s\n",people,people.getDesc(),people.getYear());
+        }
+
+        System.out.println("\nAnd now for the range!\n");
+
+        for (EnumTuna people: EnumSet.range(EnumTuna.kelsey,EnumTuna.candy)){
+            System.out.printf("%s\t%s\t%s\n",people,people.getDesc(),people.getYear());
+        }
+    }
+
+    public static void T46Static () {
+        StaticTuna member1 = new StaticTuna("Megan","Fox");
+        StaticTuna member2 = new StaticTuna("NataSha", "Hughs");
+        StaticTuna member3 = new StaticTuna("Tom","Good");
     }
 
     public static int[] RandomArray(int size) {
