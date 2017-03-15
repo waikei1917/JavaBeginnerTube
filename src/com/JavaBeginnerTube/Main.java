@@ -4,6 +4,9 @@ import java.util.EnumSet;
 import java.util.Scanner;
 import java.util.StringJoiner;
 import java.util.Random;
+import javax.swing.JOptionPane;
+import javax.swing.JFrame;
+
 
 public class Main {
 
@@ -48,7 +51,12 @@ public class Main {
         //T43Composition();
         //T44Enumeration();
         //T45EnumSetRange();
-        T46Static();
+        //T46Static();
+        //T47MoreOnStatic();
+        //T48Final();
+        //T49Inheritance();
+        //T50GUI();
+        T51GUIJFrame();
     }
 
     public static void T4HelloWorld (){
@@ -495,6 +503,61 @@ public class Main {
         StaticTuna member1 = new StaticTuna("Megan","Fox");
         StaticTuna member2 = new StaticTuna("NataSha", "Hughs");
         StaticTuna member3 = new StaticTuna("Tom","Good");
+    }
+
+    public static void T47MoreOnStatic () {
+        StaticTuna member1 = new StaticTuna("Megan","Fox");
+        StaticTuna member2 = new StaticTuna("NataSha", "Hughs");
+        StaticTuna member3 = new StaticTuna("Tom","Good");
+
+        System.out.println();
+        System.out.println(member1.getFirst());
+        System.out.println(member1.getLast());
+        System.out.println(member1.getMembers());
+
+        System.out.println();
+        System.out.println(member2.getFirst());
+        System.out.println(member2.getLast());
+        System.out.println(member2.getMembers());
+
+        System.out.println();
+        System.out.println(member3.getFirst());
+        System.out.println(member3.getLast());
+        System.out.println(member3.getMembers());
+    }
+
+    public static void T48Final () {
+        FinalTuna tunaObject = new FinalTuna(10);
+        for (int i=0; i<5; i++) {
+            tunaObject.add();
+            System.out.printf("%s", tunaObject.toString());
+        }
+    }
+
+    public static void T49Inheritance () {
+        InheritSalmon salmonObject = new InheritSalmon();
+        InheritTuna tunaObject = new InheritTuna();
+
+        salmonObject.eat();
+        tunaObject.eat();
+    }
+
+    public static void T50GUI (){
+        String fn = JOptionPane.showInputDialog("Please enter first number");
+        String sn = JOptionPane.showInputDialog("Please enter second number");
+
+        int num1 = Integer.parseInt(fn);
+        int num2 = Integer.parseInt(sn);
+
+        int sum = num1 + num2;
+        JOptionPane.showMessageDialog(null, "The answer is "+ sum, "the title", JOptionPane.PLAIN_MESSAGE);
+    }
+
+    public static void T51GUIJFrame () {
+        GUIJFrameTuna jframeObject = new GUIJFrameTuna();
+        jframeObject.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jframeObject.setSize(300,300);
+        jframeObject.setVisible(true);
     }
 
     public static int[] RandomArray(int size) {
