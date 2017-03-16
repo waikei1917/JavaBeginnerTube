@@ -56,7 +56,15 @@ public class Main {
         //T48Final();
         //T49Inheritance();
         //T50GUI();
-        T51GUIJFrame();
+        //T51GUIJFrame();
+        //T54EventHandlerProgram();
+        //T55IntroductionToPolymorphism();
+        //T56PolymorphicArguements();
+        //T59HoldObjects();
+        //T60ArrayHoldObjects();
+        //T61SimplePoly();
+        //T63JButtonProgram();
+        T65JCheckBoxProgram();
     }
 
     public static void T4HelloWorld (){
@@ -558,6 +566,76 @@ public class Main {
         jframeObject.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframeObject.setSize(300,300);
         jframeObject.setVisible(true);
+    }
+
+    public static void T54EventHandlerProgram () {
+        GUiEventHandlingTuna guiTunaObject = new GUiEventHandlingTuna();
+        guiTunaObject.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        guiTunaObject.setSize(350,100);
+        guiTunaObject.setVisible(true);
+    }
+
+    public static void T55IntroductionToPolymorphism () {
+        PolymorphismFood polyFoodObject[] = new PolymorphismFood[2];
+        polyFoodObject[0] = new PolymorphismTuna();
+        polyFoodObject[1] = new PolymorphismSalmon();
+
+        for (int x=0;x<2;++x) {
+            polyFoodObject[x].eat();
+        }
+    }
+
+    public static void T56PolymorphicArguements () {
+        PolymorphismFatty fattyObject = new PolymorphismFatty();
+        PolymorphismFood foObject = new PolymorphismFood();
+        PolymorphismFood tuObject = new PolymorphismTuna();
+        PolymorphismFood saObject = new PolymorphismSalmon();
+
+        fattyObject.digest(foObject);
+        fattyObject.digest(tuObject);
+        fattyObject.digest(saObject);
+    }
+
+    public static void T59HoldObjects () {
+        HoldObjectDogList DLO = new HoldObjectDogList();
+        HoldObjectDog d = new HoldObjectDog();
+        DLO.add(d);
+    }
+
+    public static void T60ArrayHoldObjects () {
+        HoldObjectAnimalList ALO = new HoldObjectAnimalList();
+        HoldObjectDog d = new HoldObjectDog();
+        HoldObjectCat c = new HoldObjectCat();
+
+        ALO.add(d);
+        ALO.add(c);
+    }
+
+    public static void T61SimplePoly () {
+        HoldObjectAnimal[] thelist = new HoldObjectAnimal[2];
+        HoldObjectDog d = new HoldObjectDog();
+        HoldObjectCat c = new HoldObjectCat();
+
+        thelist[0] = d;
+        thelist[1] = c;
+
+        for (HoldObjectAnimal x: thelist) {
+            x.noise();
+        }
+    }
+
+    public static void T63JButtonProgram () {
+        GUIJButton go = new GUIJButton();
+        go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        go.setSize(300,200);
+        go.setVisible(true);
+    }
+
+    public static void T65JCheckBoxProgram () {
+        GUIJCheckbox go = new GUIJCheckbox();
+        go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        go.setSize(300,200);
+        go.setVisible(true);
     }
 
     public static int[] RandomArray(int size) {
