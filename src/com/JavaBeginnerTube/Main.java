@@ -1,5 +1,6 @@
 package com.JavaBeginnerTube;
 
+import java.awt.*;
 import java.util.*;
 import java.util.EnumSet;
 import java.util.Scanner;
@@ -79,7 +80,11 @@ public class Main {
         //T80WriteToFiles();
         //T81ReadFromFiles();
         //T82ExceptionHandling();
-        T83FlowLayout();
+        //T83FlowLayout();
+        //T84DrawingGraphics();
+        //T85JColorChooser();
+        //T86DrawingStuff();
+        T87Finale();
     }
 
     public static void T4HelloWorld (){
@@ -755,6 +760,50 @@ public class Main {
         go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         go.setSize(300,100);
         go.setVisible(true);
+    }
+
+    public static void T84DrawingGraphics() {
+        JFrame f = new JFrame("Title");
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Peach p = new Peach();
+        f.add(p);
+        f.setSize(400,250);
+        f.setVisible(true);
+    }
+
+    public static void T85JColorChooser () {
+        PeachColorChooser p = new PeachColorChooser();
+        p.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    }
+
+    public static void T86DrawingStuff () {
+        JFrame f = new JFrame("Title");
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        PeachDrawing p = new PeachDrawing();
+        p.setBackground(Color.WHITE);
+        f.add(p);
+        f.setSize(500,270);
+        f.setVisible(true);
+    }
+
+    public static void T87Finale () {
+        String a = "fish";
+        String b = "TUNA";
+        String c = "tuna";
+
+        if (a.equals("fish")) {
+            System.out.println("Equals fish");
+        }
+
+        if (b.equals(c)) {
+            System.out.println("Equals fish");
+        }
+
+        if (b.equalsIgnoreCase(c)) {
+            System.out.println("Equals fish");
+        }
     }
 
     public static int[] RandomArray(int size) {
