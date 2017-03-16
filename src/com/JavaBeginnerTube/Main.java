@@ -67,7 +67,9 @@ public class Main {
         //T65JCheckBoxProgram();
         //T67JRadioButtonProgram();
         //T69DropDownListProgram();
-        T71JListProgram();
+        //T71JListProgram();
+        //T73MovingListProgram();
+        T76MouseInterfaceProgram();
     }
 
     public static void T4HelloWorld (){
@@ -657,6 +659,20 @@ public class Main {
 
     public static void T71JListProgram () {
         GUIJList go = new GUIJList();
+        go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        go.setSize(300,200);
+        go.setVisible(true);
+    }
+
+    public static void T73MovingListProgram () {
+        GUIMultipleJList go = new GUIMultipleJList();
+        go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        go.setSize(300,200);
+        go.setVisible(true);
+    }
+
+    public static void T76MouseInterfaceProgram () {
+        GUIMouse go = new GUIMouse();
         go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         go.setSize(300,200);
         go.setVisible(true);
