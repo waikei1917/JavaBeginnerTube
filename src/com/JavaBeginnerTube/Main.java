@@ -75,7 +75,11 @@ public class Main {
         //T76MouseInterfaceProgram();
         //T77AdapterClassProgram();
         //T78FileProgram();
-        T79CreatingFiles();
+        //T79CreatingFiles();
+        //T80WriteToFiles();
+        //T81ReadFromFiles();
+        //T82ExceptionHandling();
+        T83FlowLayout();
     }
 
     public static void T4HelloWorld (){
@@ -713,7 +717,44 @@ public class Main {
     }
 
     public static void T80WriteToFiles () {
+        CreateFile g = new CreateFile();
+        g.openFile();
+        g.addRecords();
+        g.closeFile();
+    }
 
+    public static void T81ReadFromFiles () {
+        ReadFile r = new ReadFile();
+        r.openFile();
+        r.readFile();
+        r.closeFile();
+    }
+
+    public static void T82ExceptionHandling () {
+        Scanner input = new Scanner(System.in);
+        int x =1;
+
+        do{
+            try{
+                System.out.println("Enter first num: ");
+                int n1 = input.nextInt();
+                System.out.println("Enter second num: ");
+                int n2 = input.nextInt();
+                int sum = n1/n2;
+                System.out.println(sum);
+                x=2;
+            }
+            catch (Exception e) {
+                System.out.println("You cant do that");
+            }
+        } while (x==1);
+    }
+
+    public static void T83FlowLayout () {
+        GUILayout go = new GUILayout();
+        go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        go.setSize(300,100);
+        go.setVisible(true);
     }
 
     public static int[] RandomArray(int size) {
