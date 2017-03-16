@@ -64,7 +64,9 @@ public class Main {
         //T60ArrayHoldObjects();
         //T61SimplePoly();
         //T63JButtonProgram();
-        T65JCheckBoxProgram();
+        //T65JCheckBoxProgram();
+        //T67JRadioButtonProgram();
+        T69DropDownListProgram();
     }
 
     public static void T4HelloWorld (){
@@ -633,6 +635,20 @@ public class Main {
 
     public static void T65JCheckBoxProgram () {
         GUIJCheckbox go = new GUIJCheckbox();
+        go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        go.setSize(300,200);
+        go.setVisible(true);
+    }
+
+    public static void T67JRadioButtonProgram () {
+        GUIJRadioButton go = new GUIJRadioButton();
+        go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        go.setSize(300,200);
+        go.setVisible(true);
+    }
+
+    public static void T69DropDownListProgram () {
+        GUIJComboBox go = new GUIJComboBox();
         go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         go.setSize(300,200);
         go.setVisible(true);
