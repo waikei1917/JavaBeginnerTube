@@ -66,7 +66,8 @@ public class Main {
         //T63JButtonProgram();
         //T65JCheckBoxProgram();
         //T67JRadioButtonProgram();
-        T69DropDownListProgram();
+        //T69DropDownListProgram();
+        T71JListProgram();
     }
 
     public static void T4HelloWorld (){
@@ -649,6 +650,13 @@ public class Main {
 
     public static void T69DropDownListProgram () {
         GUIJComboBox go = new GUIJComboBox();
+        go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        go.setSize(300,200);
+        go.setVisible(true);
+    }
+
+    public static void T71JListProgram () {
+        GUIJList go = new GUIJList();
         go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         go.setSize(300,200);
         go.setVisible(true);
