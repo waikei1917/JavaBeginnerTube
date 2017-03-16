@@ -1,5 +1,6 @@
 package com.JavaBeginnerTube;
 
+import java.util.*;
 import java.util.EnumSet;
 import java.util.Scanner;
 import java.util.StringJoiner;
@@ -7,6 +8,8 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 import javax.swing.JFrame;
 
+import java.io.File;
+import java.lang.*;
 
 public class Main {
 
@@ -69,7 +72,10 @@ public class Main {
         //T69DropDownListProgram();
         //T71JListProgram();
         //T73MovingListProgram();
-        T76MouseInterfaceProgram();
+        //T76MouseInterfaceProgram();
+        //T77AdapterClassProgram();
+        //T78FileProgram();
+        T79CreatingFiles();
     }
 
     public static void T4HelloWorld (){
@@ -676,6 +682,38 @@ public class Main {
         go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         go.setSize(300,200);
         go.setVisible(true);
+    }
+
+    public static void T77AdapterClassProgram () {
+        GUIAdapter go = new GUIAdapter();
+        go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        go.setSize(300,200);
+        go.setVisible(true);
+    }
+
+    public static void T78FileProgram () {
+        File x = new File("FishTime.txt");
+        if (x.exists()){
+            System.out.println(x.getName() + "exist");
+        } else {
+            System.out.println("Not Exist");
+        }
+    }
+
+    public static void T79CreatingFiles() {
+        final Formatter x;
+
+        try{
+            x = new Formatter("Fish.txt");
+            System.out.println("File Created");
+        }
+        catch(Exception e) {
+            System.out.println("Error");
+        }
+    }
+
+    public static void T80WriteToFiles () {
+
     }
 
     public static int[] RandomArray(int size) {
